@@ -1,9 +1,8 @@
-import { vi } from "vitest";
 import * as myModule from "src/my-module";
 
 describe("my module test", () => {
   it("should use the mocked token", async () => {
-    const spy = vi
+    const spy = jest
       .spyOn(myModule, "getToken")
       .mockResolvedValue("the mocked token");
 
